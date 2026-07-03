@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub de Soluções Internas | SDR & Consultor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col md:flex-row min-h-screen">
+
+    <aside class="w-full md:w-64 bg-slate-900 text-white flex flex-col shrink-0 shadow-xl">
+        <div class="p-6 border-b border-slate-800">
+            <h1 class="text-lg font-bold tracking-wider text-indigo-400">HUB DE SOLUÇÕES</h1>
+            <p class="text-xs text-slate-400 mt-1">Painel do Consultor & SDR</p>
+        </div>
+        <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition bg-indigo-600 text-white">
+                📊 Matriz de Direcionamento
+            </button>
+            <button onclick="switchTab('pertencer')" id="btn-pertencer" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-slate-800 hover:text-white">
+                🛡️ Jornada Pertencer
+            </button>
+            <button onclick="switchTab('performa')" id="btn-performa" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-slate-800 hover:text-white">
+                🚀 Jornada Performa
+            </button>
+            <button onclick="switchTab('observatorio')" id="btn-observatorio" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-slate-800 hover:text-white">
+                🎯 Observatório ENEM
+            </button>
+            <button onclick="switchTab('geomarketing')" id="btn-geomarketing" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-slate-800 hover:text-white">
+                🗺️ Geomarketing
+            </button>
+            <button onclick="switchTab('suplementares')" id="btn-suplementares" class="tab-btn w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-slate-800 hover:text-white">
+                📚 Materiais Suplementares
+            </button>
+        </nav>
+        <div class="p-4 border-t border-slate-800 text-center text-xs text-slate-500">
+            Uso Interno — Sistema Positivo 2026
+        </div>
+    </aside>
+
+    <main class="flex-1 p-6 md:p-10 max-w-7xl w-full mx-auto overflow-y-auto">
+
+        <section id="tab-dashboard" class="tab-content space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <h2 class="text-3xl font-bold text-slate-900">Matriz de Direcionamento Rápido</h2>
+                <p class="text-slate-500 mt-1">Identifique o perfil do cliente e localize o argumento ideal instantaneamente.</p>
+            </div>
+            
+            <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-200 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                            <th class="p-4">Critério</th>
+                            <th class="p-4 text-indigo-600">Jornada Pertencer</th>
+                            <th class="p-4 text-emerald-600">Jornada Performa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-sm">
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-700 bg-slate-50">Foco Principal</td>
+                            <td class="p-4">Inclusão, Afeto e Segurança Jurídica.</td>
+                            <td class="p-4">Dados, Eficiência e Resultado (Enem).</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-700 bg-slate-50">Público Ideal</td>
+                            <td class="p-4">Educação Infantil ao Fundamental I.</td>
+                            <td class="p-4">Fundamental II ao Ensino Médio.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-700 bg-slate-50">Maior Benefício</td>
+                            <td class="p-4 text-indigo-600 font-medium">Reter famílias pelo acolhimento de laudos.</td>
+                            <td class="p-4 text-emerald-600 font-medium">Atrair e Aprovar alunos pelo rendimento acadêmico.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-700 bg-slate-50">Fator "Zero Atrito"</td>
+                            <td class="p-4 text-slate-600 text-xs">A degustação atua apenas nos bastidores (gestão e PEIs), permitindo testar o suporte do Positivo sem alterar a rotina da escola até a adoção oficial do sistema.</td>
+                            <td class="p-4 text-slate-600 text-xs">A degustação foca na aplicação de simulados e análise de dados, provando o valor da nossa tecnologia.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tab-pertencer" class="tab-content hidden space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded">Módulo Inclusão</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Jornada Pertencer (O Escudo da Inclusão)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl">
+                    <h3 class="font-bold text-amber-900 text-sm uppercase tracking-wide">Quando Oferecer?</h3>
+                    <p class="text-amber-800 text-sm mt-2">Deve ser oferecido para escolas focadas na base (Educação Infantil e Anos Iniciais) ou quando a coordenação reclama que os professores estão exaustos com a burocracia dos alunos laudados.</p>
+                </div>
+                <div class="bg-rose-50 border-l-4 border-rose-500 p-5 rounded-r-xl">
+                    <h3 class="font-bold text-rose-900 text-sm uppercase tracking-wide">A Dor de Mercado</h3>
+                    <p class="text-rose-800 text-sm mt-2">O número de alunos com laudos (TEA, TDAH, TOD) explodiu. Se a escola não documentar as adaptações de forma correta, ela corre riscos legais graves. O Pertencer padroniza e blinda esses registros.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Pilares Estratégicos de Venda</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2">⏳</div>
+                        <h4 class="font-bold text-slate-900">Desafogo Docente</h4>
+                        <p class="text-slate-600 text-xs mt-2">Criar um PEI (Plano de Ensino Individualizado) manualmente consome hours de trabalho. A ferramenta automatiza esse processo passo a passo, devolvendo tempo de vida ao professor.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2">🥇</div>
+                        <h4 class="font-bold text-slate-900">Chancela de Autoridade</h4>
+                        <p class="text-slate-600 text-xs mt-2">Desenvolvido com o Instituto Rodrigo Mendes, a maior referência em educação inclusiva do Brasil. Não é uma "solução de prateleira", tem validação científica.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-xl mb-2">🛡️</div>
+                        <h4 class="font-bold text-slate-900">Retenção de Famílias</h4>
+                        <p class="text-slate-600 text-xs mt-2">Pais de alunos laudados não buscam preço, buscam acolhimento. Mostrar que a escola usa tecnologia de ponta para cuidar do filho deles zera a evasão dessas famílias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-xl relative shadow-md">
+                <span class="absolute top-4 right-4 bg-indigo-500 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded">Pitch de 30 Segundos</span>
+                <h4 class="text-indigo-400 font-bold text-sm mb-2">Script Pronto para Uso:</h4>
+                <p id="pitch-pertencer-text" class="text-slate-200 text-sm leading-relaxed italic">
+                    "Diretora, queremos liberar uma degustação da Jornada Pertencer, nosso objetivo é que você possa testá-lo na prática sem precisar alterar seu material agora mas já entendendo como apoiamos as nossas escolas nos bastidores, ajudando a dar um alívio prático gigantesco para os seus professores na montagem dos PEls e trazer 100% de segurança jurídica para a sua coordenação na guarda dos relatórios de inclusão, sob a chancela do Instituto Rodrigo Mendes."</p>
+                <button onclick="copyText('pitch-pertencer-text')" class="mt-4 bg-indigo-600 hover:bg-indigo-700 text-xs font-semibold px-4 py-2 rounded-lg transition tracking-wide uppercase">
+                    📋 Copiar Pitch para o Teclado
+                </button>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">O que a Jornada Pertencer Entrega (Parte a Parte)</h3>
+                <div class="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 text-sm">
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Parceria com o Instituto Rodrigo Mendes:</strong> O desenvolvimento de toda a pauta e ferramentas de inclusão foi realizado em conjunto com este instituto, que é a maior referência no assunto.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Montagem Automatizada de PEIs:</strong> Sistema que otimiza e agiliza o trabalho dos professores na criação dos Planos de Ensino Individualizados para alunos com necessidades especiais.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Resguardo Jurídico e Arquivamento de Laudos:</strong> Espaço seguro para organizar, validar e armazenar os laudos médicos dos estudantes, blindando legalmente a gestão da escola.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>IA Assistente do Professor:</strong> Uma inteligência artificial integrada à plataforma para dar suporte direto ao docente nas dúvidas e condução de pautas inclusivas em sala de aula.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Adaptação de Materiais (Físico e Digital):</strong> Recursos adaptados para o ambiente virtual de aprendizagem e também suporte para materiais físicos especiais, como a impressão e adaptação em Braille.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Acessibilidade no Físico:</strong> Entrega recursos de acessibilidade no material físico através do sistema ColorADD para daltônicos, textos não justificados e réguas de leitura.</p></div>
+                    <div class="p-4 flex items-start gap-3"><span class="text-indigo-500 font-bold">•</span> <p><strong>Formações de Inclusão:</strong> Treinamentos pedagógicos e cursos de capacitação para os professores e coordenadores aprenderem a lidar na prática com a educação inclusiva.</p></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-100 border border-slate-300 p-5 rounded-xl text-xs text-slate-600">
+                <p class="font-bold text-slate-800 uppercase tracking-wider mb-2">🚨 Esclarecimento Importante: Inclusão VS. Socioemocional</p>
+                <p class="mb-2">A Jornada Pertencer é 100% focada em <strong>INCLUSÃO</strong>, e não possui relação com o desenvolvimento socioemocional.</p>
+                <p>O Socioemocional na Positivo faz parte do pilar de formação integral e ganha força por meio de ícones de sinalização nos livros e soluções específicas como o <strong>Positivo Integra</strong> e o <strong>Projeto de Vida</strong>. Se a escola quiser um programa específico e aprofundado para essa área, ela deve contratar soluções à parte como a <strong>Escola da Inteligência</strong> ou o <strong>Pleno</strong>.</p>
+            </div>
+        </section>
+
+        <section id="tab-performa" class="tab-content hidden space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded">Módulo Performance</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Jornada Performa (O Motor do Alto Desempenho)</h2>
+            </div>
+
+            <div class="bg-emerald-50 border-l-4 border-emerald-500 p-5 rounded-r-xl">
+                <h3 class="font-bold text-emerald-900 text-sm uppercase tracking-wide">Público-Alvo Perfeito</h3>
+                <p class="text-emerald-800 text-sm mt-1">O Performa deve ser oferecido para escolas focadas em Anos Finais e Ensino Médio, colégios tradicionais de alta performance ou redes focadas em resultados de aprovação (Enem/Vestibulares).</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Por que a escola precisa do Performa?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                        <div class="text-xl">📊</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Inteligência de Dados Real (TRI)</h4>
+                            <p class="text-slate-600 text-xs mt-1">Corrigir simulados no padrão Enem sem uma análise TRI (Teoria de Resposta ao Item) real é voar às cegas. O Performa entrega relatórios milimétricos de proficiência por aluno e por turma.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                        <div class="text-xl">🤖</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Otimização de Tempo com IA</h4>
+                            <p class="text-slate-600 text-xs mt-1">A plataforma usa Inteligência Artificial para analisar os gargalos de aprendizagem, gerando planos de ação automáticos para os professores atacarem os conteúdos que a turma errou.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                        <div class="text-xl">👨‍🏫</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Melhoria da Performance Docente</h4>
+                            <p class="text-slate-600 text-xs mt-1">O director consegue enxergar exatamente qual professor ou matéria está abaixo da média da região e intervir antes que o ano acabe.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                        <div class="text-xl">🧲</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Atração de Novas Matrículas</h4>
+                            <p class="text-slate-600 text-xs mt-1">No Ensino Médio, os pais compram dados e aprovação. O Performa dá à escola o arsenal gráfico e estatístico necessário para provar às famílias que o colégio sabe exatamente como colocar o aluno na universidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-xl relative shadow-md">
+                <span class="absolute top-4 right-4 bg-emerald-500 text-slate-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Pitch de 30 Segundos</span>
+                <h4 class="text-emerald-400 font-bold text-sm mb-2">Script Pronto para Uso:</h4>
+                <p id="pitch-performa-text" class="text-slate-200 text-sm leading-relaxed italic">
+                    "Diretor, dentro da nossa plataforma você vai conhecer o Performa, nosso ecossistema de inteligência de dados e alta performance. Ele entrega simulados com correção TRI padrão Enem e ferramentas no Positivo On para mapear as maiores oportunidades de desenvolvimento das suas turmas. Com esses dados, os professores conseguem direcionar seus planos de ação com precisão, dando à sua escola o argumento perfeito para provar aos pais que vocês dominam a estratégia de aprovação."</p>
+                <button onclick="copyText('pitch-performa-text')" class="mt-4 bg-emerald-600 hover:bg-emerald-700 text-slate-900 text-xs font-semibold px-4 py-2 rounded-lg transition tracking-wide uppercase font-bold">
+                    📋 Copiar Pitch para o Teclado
+                </button>
+            </div>
+        </section>
+
+        <section id="tab-observatorio" class="tab-content hidden space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-2.5 py-1 rounded">Ferramenta Diagnóstica</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Observatório ENEM (Farol ENEM)</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">O que é?</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Um projeto de pesquisa avançada baseado nos microdados oficiais do INEP. Em vez de uma nota média fria, ele cruza o histórico do colégio com a Matriz de Referência do ENEM, gerando um raio-X profundo do desempenho por área do conhecimento.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Por que ajuda a escola?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm border-t-4 border-t-indigo-500">
+                        <h4 class="font-bold text-slate-900 text-sm">Corrige Rotas Pedagógicas</h4>
+                        <p class="text-slate-600 text-xs mt-2">Mostra com precisão cirúrgica quais competências e habilidades os alunos mais erraram, permitindo que a coordenação ajuste os planos de aula.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm border-t-4 border-t-indigo-500">
+                        <h4 class="font-bold text-slate-900 text-sm">Munição para o Marketing</h4>
+                        <p class="text-slate-600 text-xs mt-2">Destaca as grandes fortalezas da escola (como notas altas em Redação), servindo de argumento incontestável para atrair novas famílias.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm border-t-4 border-t-indigo-500">
+                        <h4 class="font-bold text-slate-900 text-sm">Freia a Evasão</h4>
+                        <p class="text-slate-600 text-xs mt-2">Dá o direcionamento exato para os professores trabalharem com dados reais no segundo semestre, elevando o rendimento e retendo os alunos do Ensino Médio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-xl relative shadow-md">
+                <span class="absolute top-4 right-4 bg-sky-400 text-slate-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Pitch para Ligação</span>
+                <h4 class="text-sky-400 font-bold text-sm mb-2">Script do SDR:</h4>
+                <p id="pitch-observatorio-text" class="text-slate-200 text-sm leading-relaxed italic">
+                    "Oi, [Nome], tudo bem? Eu consegui rodar no nosso sistema um estudo estratégico do seu colégio chamado Observatório ENEM. Ele cruza os microdados do INEP e mostra os quadrantes exatos de erro dos alunos e onde os professores podem agir para subir a média da escola nas revisões. Como o sistema só emite esse relatório gratuito até sexta, conseguimos um encaixe de 20 minutinhos na tela para eu te entregar esse mapa?"</p>
+                <button onclick="copyText('pitch-observatorio-text')" class="mt-4 bg-sky-500 hover:bg-sky-600 text-slate-900 text-xs font-semibold px-4 py-2 rounded-lg transition tracking-wide uppercase font-bold">
+                    📋 Copiar Script de Ligação
+                </button>
+            </div>
+        </section>
+
+        <section id="tab-geomarketing" class="tab-content hidden space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-violet-100 text-violet-800 text-xs font-semibold px-2.5 py-1 rounded">Inteligência de Mercado</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Geomarketing (Estudo de Mercado)</h2>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="max-w-2xl">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">O que é?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Uma ferramenta estratégica de inteligência de mercado de alto valor agregado (avaliada em R$ 5.000 apenas para fins de conhecimento interno,  <strong>NUNCA mencionar para a escola que custa isso </strong>). Ela mapeia o comportamento do público local, a densidade populacional e o raio de atuação dos concorrentes ao redor da escola.</p>
+                </div>
+                <div class="bg-violet-100 text-violet-800 px-4 py-3 rounded-xl font-bold text-center text-sm shrink-0">
+                    Análise Avaliada em <br><span class="text-xl">R$ 5.000</span> <br><span class="text-[10px] font-normal uppercase text-violet-600">(Grátis como Benefício)</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Por que ajuda a escola?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-violet-500 font-bold mb-2">📈 Crescimento Seguro</div>
+                        <p class="text-slate-600 text-xs">Fornece dados demográficos reais da região para guiar decisões de expansão, captação e investimento financeiro.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-violet-500 font-bold mb-2">🎯 Campanhas Precisas</div>
+                        <p class="text-slate-600 text-xs">Zera o desperdício de dinheiro em propaganda, direcionando as ações de marketing exatamente para os bairros e perfis de famílias com maior potencial de compra.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="text-violet-500 font-bold mb-2">🛡️ Estabilidade Financeira</div>
+                        <p class="text-slate-600 text-xs">Ajuda a prever o comportamento do mercado local para blindar a escola contra a perda de matrículas para a concorrência.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-xl relative shadow-md">
+                <span class="absolute top-4 right-4 bg-violet-400 text-slate-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Pitch para Ligação</span>
+                <h4 class="text-violet-400 font-bold text-sm mb-2">Script do SDR:</h4>
+                <p id="pitch-geomarketing-text" class="text-slate-200 text-sm leading-relaxed italic">
+                    "Oi, [Nome], tudo bem? Nós desenvolvemos uma análise de inteligência de mercado chamada Geomarketing, que mapeia o potencial de novas matrículas no seu bairro e o comportamento das famílias ao redor da escola. Eu consegui a liberação desse estudo estratégico de forma 100% gratuita para apoiar o planejamento de vocês contra a evasão. O que fica melhor para abrirmos a tela e eu te entregar esses dados: quinta ou sexta-feira?"</p>
+                <button onclick="copyText('pitch-geomarketing-text')" class="mt-4 bg-violet-500 hover:bg-violet-600 text-slate-900 text-xs font-semibold px-4 py-2 rounded-lg transition tracking-wide uppercase font-bold">
+                    📋 Copiar Script de Ligação
+                </button>
+            </div>
+        </section>
+
+        <section id="tab-suplementares" class="tab-content hidden space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded">Expansão de Portfólio</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Portfólio de Materiais Suplementares/Opicionais (Sistema Positivo)</h2>
+                <p class="text-slate-500 text-sm mt-1"><strong>Objetivo Geral:</strong> Expandir a proposta pedagógica da escola, garantindo formação integral e alto desempenho, sem gerar atrito com o currículo regular.</p>
+            </div>
+
+            <div class="bg-blue-50 text-blue-900 p-4 rounded-xl border border-blue-200 text-xs">
+                <strong>💡 Dica de uso comercial de ouro:</strong> Se você for apresentar isso a um gestor escolar, foque direto na etapa de ensino que é a maior "dor" dele no momento (ex: se o problema dele é retenção de alunos mais velhos, vá direto para o item 5 - Pré-Vestibular).</div>
+
+            <div class="space-y-4">
+                
+                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Item 1 — Alfabetização</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1">Coleções: "Nas linhas das letras" e "Das letras às palavras"</h3>
+                    <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div>
+                            <p class="text-slate-500"><strong>Público-alvo:</strong> Crianças de 5 a 7 anos (transição entre Educação Infantil e Anos Iniciais).</p>
+                            <p class="text-slate-500 mt-1"><strong>Por que adotar:</strong> Oferece suporte focado e muito bem estruturado nessa fase crítica do desenvolvimento.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="font-bold text-slate-700 block mb-1">Benefícios Práticos:</span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Consolida o letramento de forma lúdica e gradual.</li>
+                                <li>Desenvolve a autonomia do aluno.</li>
+                                <li>Facilita enormemente o planejamento do professor.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Item 2 — Ensino Religioso</span>
+                        <p class="text-xs text-slate-500 mt-1"><strong>Público-alvo:</strong> Ensino Fundamental (ideal para escolas confessionais ou com forte foco em valores).<strong>Por que adotar:</strong> Para construir uma base ética, moral e cidadã sólida nos alunos.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                            <h4 class="font-bold text-amber-700 text-sm">CONEXÕES DE FÉ</h4>
+                            <p class="text-slate-600 mt-2"><strong>Recomendado para:</strong> Escolas confessionais (como católicas, luteranas, etc.) que possuem uma identidade religiosa definida e buscam vivenciar essa fé no dia a dia.</p>
+                            <p class="text-rose-600 font-bold mt-2">🚨 IMPORTANTE: Esse material só aborda a fé CRISTÃ.</p>
+                            <p class="text-slate-500 mt-1">Apoia a liderança da escola no alinhamento do seu propósito religioso com a prática pedagógica e pastoral.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-xs">
+                            <h4 class="font-bold text-emerald-700 text-sm">PASSADO, PRESENTE E FÉ (Coleção Percursos)</h4>
+                            <p class="text-slate-600 mt-2"><strong>Recomendado para:</strong> Escolas regulares (laicas) ou confessionais mais abrangentes que buscam atender rigorosamente às diretrizes da BNCC para o Ensino Religioso.</p>
+                            <p class="text-slate-500 mt-2">O material convida o aluno a conhecer e compreender as diversas culturas religiosas que compõem a sociedade brasileira. A abordagem é fundamentada nas Ciências da Religião e áreas acadêmicas afins, enfatizando pontos que aproximam as religiões, o diálogo inter-religioso, a tolerância e o respeito à diversidade.</p>
+                        </div>
+                    </div>
+                    <div class="text-xs bg-slate-100 p-3 rounded-lg border border-slate-200">
+                        <strong>Benefícios Gerais do Ensino Religioso:</strong> 100% alinhado à BNCC,trabalha a compreensão da diversidade religiosae fortalece o propósito institucional e os valores da escola.</div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Item 3 — Língua Espanhola</span>
+                    <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div>
+                            <p class="text-slate-500"><strong>Público-alvo:</strong> Anos Finais e Ensino Médio.</p>
+                            <p class="text-slate-500 mt-1"><strong>Por que adotar:</strong> Para escolas que querem oferecer um segundo idioma forte, visando proficiência e aprovação.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="font-bold text-slate-700 block mb-1">Benefícios Práticos:</span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Mesma metodologia e projeto gráfico das demais disciplinas do Positivo.</li>
+                                <li>Foco em situações reais de uso do idioma.</li>
+                                <li>Preparação direta e focada para provas de vestibulares.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Item 4 — Ciências Avançadas (9° Ano)</span>
+                            <h3 class="text-base font-bold text-slate-900 mt-0.5">Preparação Antecipada do Ensino Médio</h3>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Exclusivo Digital (Positivo ON)</span>
+                    </div>
+                    <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div>
+                            <p class="text-slate-500"><strong>Público-alvo:</strong> Alunos do 9º ano do Ensino Fundamental.</p>
+                            <p class="text-slate-500 mt-1"><strong>Por que adotar:</strong> Para escolas com alto rigor acadêmico que desejam antecipar a preparação para o Ensino Médio.</p>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <span class="font-bold text-slate-700 block mb-1">Benefícios Práticos:</span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                                <li>Divide o currículo de Ciências em 3 frentes: Biologia, Química e Física.</li>
+                                <li>Aprofunda o conteúdo e garante uma transição suave para a 1ª série do Ensino Médio, sem quebra de pré-requisitos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider block">Item 5 — Soluções Pré-Vestibular</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Coleções: "Prepara Positivo" e "Prepara Intensivo"</h3>
+                        <p class="text-xs text-slate-500 mt-1"><strong>Público-alvo:</strong> 3ª série do Ensino Médio e Cursinhos.<strong>Por que adotar:</strong> Foco total em alta performance, atração de matrículas e aprovação no ENEM/grandes vestibulares.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900">Prepara Positivo</h4>
+                            <p class="text-slate-600 mt-1">Para escolas com carga horária estendida (aproximadamente 39 aulas/semana).</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900">Prepara Intensivo</h4>
+                            <p class="text-slate-600 mt-1">Para escolas com grade mais enxuta (a partir de 32 aulas/semana).</p>
+                        </div>
+                    </div>
+                    <div class="text-xs bg-slate-100 p-3 rounded-lg border border-slate-200">
+                        <strong>Benefícios Práticos do Pré-Vestibular:</strong> Material atualizado anualmente (com questões até 2024).Ecossistema digital gigante composto por videoaulas, lousas de revisão e simulados completos com nota TRI.</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function switchTab(tabId) {
+            // Oculta todas as páginas de conteúdo
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Remove o destaque ativo de todos os botões da sidebar
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white');
+                btn.classList.add('text-slate-300', 'hover:bg-slate-800', 'hover:text-white');
+            });
+
+            // Mostra o conteúdo da aba selecionada
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            // Adiciona o destaque ativo no botão selecionado
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-slate-300', 'hover:bg-slate-800', 'hover:text-white');
+            activeBtn.classList.add('bg-indigo-600', 'text-white');
+        }
+
+        function copyText(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('Pitch comercial copiado com sucesso! Já pode colar na sua conversa.');
+            }).catch(err => {
+                console.error('Erro ao copiar texto: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
